@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Template.Master" AutoEventWireup="true" CodeBehind="Account.master.cs" Inherits="FrootaxiMain.Accounts.NestedMasterPage1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="script" runat="server">
+    <asp:ContentPlaceHolder ID="script" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="promptContent" runat="server">
+    <asp:ContentPlaceHolder ID="promptContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="loginStatus1" runat="server">
+    <asp:ContentPlaceHolder ID="loginStatus1" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="toRightContent" runat="server">
+    <asp:ContentPlaceHolder ID="toRightContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="loginStatus2" runat="server">
+    <asp:ContentPlaceHolder ID="loginStatus2" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content7" ContentPlaceHolderID="rightSideContent" runat="server">
+    <asp:ContentPlaceHolder ID="rightSideContent" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>

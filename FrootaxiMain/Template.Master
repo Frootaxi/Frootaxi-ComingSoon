@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="FrootaxiMain.Template" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+    <link type='text/css' rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.theme.css" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/typography.css" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="js/spin.js"></script>
+    <script type="text/javascript" src="js/jquery.spin.js"></script>
+    
+    <script>var jQ = jQuery.noConflict();</script>
+    <script type="text/javascript">
+        jQ(function ($) {
+            $(document).tooltip({
+                track: true,
+                delay: 0,
+                fade: 250,
+                autoHide: true
+            });
+        });
+
+        
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39444740-1']);
+        _gaq.push(['_setDomainName', 'frootaxi.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <!--[if !IE]>-->
+    <style type="text/css">
+	    body {
+	        font-size:16px;
+	    }
+
+    </style>
+    <!--<[endif]-->
+
+    <asp:ContentPlaceHolder ID="script" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div id="wrapper">
+        <asp:ContentPlaceHolder ID="promptContent" runat="server">
+        </asp:ContentPlaceHolder>
+		<div id="leftSide">
+            <noscript>
+                <asp:Label ID="noJavaScriptEnabled" runat="server" CssClass="error msg" style="display:block" Text="Please note that this site will not function properly without Javascript enabled."></asp:Label>
+            </noscript>
+			<div id="middlePanel" >
+				<fieldset id="top">
+                    <legend></legend>
+					<ul id="topLeft">
+						<li><a href="#">Blog</a></li>
+						<li><a href="../Information/Safety.aspx">Safety</a></li>
+						<li><a href="../Information/Terms.aspx">Terms</a></li>
+					    <li><a href="#">Learn More</a></li>
+					    <li><a href="../Information/FAQs.aspx">FAQs</a></li>
+					</ul>
+					<ul id="topRight">
+                        <asp:ContentPlaceHolder ID="loginStatus1" runat="server">
+                        </asp:ContentPlaceHolder>
+					</ul>
+				</fieldset>
+				<div id="middleContent">
+					<fieldset id="toLeft">
+                        <legend></legend>
+						<ul class="middleContent">
+							<li><a href="../default.aspx" title="Return to the home page"><img src="../images/logo-big.png" id="logo" alt="Frootaxi Logo" class="img" /></a></li>
+                            <li id="appIcons">
+							    <ul>
+								    <li><a href="#" class="link" id="android" title="Coming Soon"></a></li>
+								    <li><a href="#" class="link" id="ios" title="Coming Soon"></a></li>
+								    <li><a href="#" class="link" id="blackberry" title="Coming Soon"></a></li>
+                                    <li><a href="#" class="link" id="windows" title="Coming Soon"></a></li>
+							    </ul>
+						    </li>
+							<li><p>The On-demand taxi hailing service for Africa</p></li>
+							<li><p>Frootaxi is the new way to hail a taxi in West Africa. Take your trip in comfort the next time you go somewhere.</p></li>
+                        </ul>
+                        <div id="socialMediaLinks">
+                            <ul>
+							    <li><a href="http://www.facebook.com/Frootaxi" class="icon facebook"></a></li>
+							    <li><a href="https://twitter.com/Frootaxi" class="icon twitter"></a></li>
+                                <li><a href="http://www.linkedin.com/company/frootaxi" class="icon linkedIn"></a></li>
+                            </ul>
+						</div>
+					</fieldset>
+					<fieldset id="toRight">
+                        <asp:ContentPlaceHolder ID="toRightContent" runat="server">
+        
+                        </asp:ContentPlaceHolder>
+					</fieldset>
+				</div><!--end of middleContent-->
+				<div id="bottomBg">
+					<fieldset id="bottom">
+						<ul id="bottomLeft">
+							<li><a href="#">Blog</a></li>
+							<li><a href="Information/Safety.aspx">Safety</a></li>
+							<li><a href="Information/Terms.aspx">Terms</a></li>
+					        <li><a href="#">Learn More</a></li>
+					        <li><a href="Information/FAQs.aspx">FAQs</a></li>
+						</ul>
+						<ul class="bottomRight">
+                            <asp:ContentPlaceHolder ID="loginStatus2" runat="server">
+                            </asp:ContentPlaceHolder>
+						</ul>
+					</fieldset>
+				</div>
+			</div><!--end of middlePanel-->
+		</div><!--end of leftSide-->
+        <div id="rightSide">
+			<div id="rightPanel" class="register class">
+                <asp:ContentPlaceHolder ID="rightSideContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

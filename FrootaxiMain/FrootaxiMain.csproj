@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A4907CFC-38BF-40B4-9580-462AD9CD1CE4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FrootaxiMain</RootNamespace>
+    <AssemblyName>FrootaxiMain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="DAL.Properties.Settings.frootaxi_dbConnectionString5-Deployment" Order="1" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=ftdb.c4inkcnkde3g.us-east-1.rds.amazonaws.com%3bInitial Catalog=frootaxi_db%3bUser ID=frootaxiUser%3bPassword=FHosf%3bw-023\nfb" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\DAL.Properties.Settings.frootaxi_dbConnectionString5-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="DAL.Properties.Settings.frootaxi_dbConnectionString4-Deployment" Order="2" xmlns="">
+          <Destination Path="" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=localhost%3bInitial Catalog=frootaxi_db%3bUser ID=frootaxiUser%3bPassword=frootaxipswd" ScriptSchema="True" ScriptData="False" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\DAL.Properties.Settings.frootaxi_dbConnectionString4-Deployment_SchemaOnly.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts\Account_Activation.aspx" />
+    <Content Include="Accounts\Expired_Password_Token.aspx" />
+    <Content Include="Accounts\Forgot_Password.aspx" />
+    <Content Include="Accounts\New_Password.aspx" />
+    <Content Include="Accounts\Register.aspx" />
+    <Content Include="Accounts\Login.aspx" />
+    <Content Include="css\altLayout.css" />
+    <Content Include="css\costing.css" />
+    <Content Include="css\information.css" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery-ui.theme.css" />
+    <Content Include="css\landingPage.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\rightSide.OneColumn.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\typography.css" />
+    <Content Include="Driver\register.aspx" />
+    <Content Include="driver_registration_form.aspx" />
+    <Content Include="identity.aspx" />
+    <Content Include="images\calendar.png" />
+    <Content Include="images\clear_taxi.png" />
+    <Content Include="images\lBubbleTip.png" />
+    <Content Include="images\logo-big.png" />
+    <Content Include="images\logo-small.png" />
+    <Content Include="default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\appSprite.png" />
+    <Content Include="images\bg_leather.png" />
+    <Content Include="images\black_bg_noise.png" />
+    <Content Include="images\bubbleTip.png" />
+    <Content Include="images\cash_story_board.png" />
+    <Content Include="images\day.jpg" />
+    <Content Include="images\landingPgSprite.png" />
+    <Content Include="images\socialMediaSprite.png" />
+    <Content Include="images\taxi.gif" />
+    <Content Include="images\taxi.png" />
+    <Content Include="images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="images\ui-icons_454545_256x240.png" />
+    <Content Include="images\ui-icons_888888_256x240.png" />
+    <Content Include="images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Information\FAQs.aspx" />
+    <Content Include="Information\Safety.aspx" />
+    <Content Include="Information\Terms.aspx" />
+    <Content Include="js\jquery.spin.js" />
+    <Content Include="js\script.js" />
+    <Content Include="js\spin.js" />
+    <Content Include="js\taxi\1.png" />
+    <Content Include="js\taxi\2.png" />
+    <Content Include="js\taxi\3.png" />
+    <Content Include="js\taxi\4.png" />
+    <Content Include="js\taxi\5.png" />
+    <Content Include="js\taxi\piwik.js" />
+    <Content Include="js\taxi\PlayFrameAnimation.js" />
+    <Content Include="my_trip.aspx" />
+    <Content Include="payg.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts\Verify.Master.cs">
+      <DependentUpon>Verify.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Verify.Master.designer.cs">
+      <DependentUpon>Verify.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Account_Activation.aspx.cs">
+      <DependentUpon>Account_Activation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Account_Activation.aspx.designer.cs">
+      <DependentUpon>Account_Activation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Expired_Password_Token.aspx.cs">
+      <DependentUpon>Expired_Password_Token.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Expired_Password_Token.aspx.designer.cs">
+      <DependentUpon>Expired_Password_Token.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Forgot_Password.aspx.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Forgot_Password.aspx.designer.cs">
+      <DependentUpon>Forgot_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Account.master.cs">
+      <DependentUpon>Account.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Account.master.designer.cs">
+      <DependentUpon>Account.master</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\New_Password.aspx.cs">
+      <DependentUpon>New_Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\New_Password.aspx.designer.cs">
+      <DependentUpon>New_Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\driver_registration.Master.cs">
+      <DependentUpon>driver_registration.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Driver\driver_registration.Master.designer.cs">
+      <DependentUpon>driver_registration.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Driver\register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Driver\register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="driver_registration_form.aspx.cs">
+      <DependentUpon>driver_registration_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="driver_registration_form.aspx.designer.cs">
+      <DependentUpon>driver_registration_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Information\FAQs.aspx.cs">
+      <DependentUpon>FAQs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\FAQs.aspx.designer.cs">
+      <DependentUpon>FAQs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Information.Master.cs">
+      <DependentUpon>Information.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Information.Master.designer.cs">
+      <DependentUpon>Information.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Safety.aspx.cs">
+      <DependentUpon>Safety.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Safety.aspx.designer.cs">
+      <DependentUpon>Safety.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="my_trip.aspx.cs">
+      <DependentUpon>my_trip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my_trip.aspx.designer.cs">
+      <DependentUpon>my_trip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="payg.aspx.cs">
+      <DependentUpon>payg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="payg.aspx.designer.cs">
+      <DependentUpon>payg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Template.Master.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Template.Master.designer.cs">
+      <DependentUpon>Template.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts\Verify.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{8586A177-29FE-4917-B1C5-B8B70CD09412}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Main\EngineClass.csproj">
+      <Project>{921B92EB-ED07-4E7D-BD83-56007551DB8D}</Project>
+      <Name>EngineClass</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template.Master" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Information\Information.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Driver\driver_registration.Master" />
+    <Content Include="Accounts\Account.master" />
+    <None Include="Properties\PublishProfiles\local_machine_publish.pubxml" />
+    <None Include="Properties\PublishProfiles\wwwroot_publish.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2474</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

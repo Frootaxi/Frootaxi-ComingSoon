@@ -1,0 +1,92 @@
+﻿/** NB: Device-width dependent **/
+
+@media only screen and (min-width: 1225px) {
+
+    .landingPageText, .padding2 {
+		padding-bottom:8%;
+	}
+	
+}
+
+@media only screen and (min-width: 1025px) {
+    
+    #rightPanel {
+		margin-top:4%;
+	}
+	
+	#rightPanel li:last-child {
+		border-bottom:1px #000 solid;
+	}
+
+    .no_bottom_border {
+        border-bottom: 0px solid #000 !important;
+    }
+	
+	#rightPanel .last-child li:last-child, #rightPanel #submitButtonStyle, #rightPanel #submitButtonStyle li {
+		border:none;
+	}
+
+    #rightPanel #submitButtonStyle {
+        margin-top:76px;
+    }
+	
+	#packages li {
+		position:relative;
+	}
+	
+	#ddlPaymentPackage {
+		position:relative;
+	}
+    
+}
+
+@media only screen and (min-width: 1025px) and (max-width:1224px) {
+	
+	.landingPageText {
+		padding-bottom:5%;
+	}
+}
+
+@media screen and (min-device-width: 481px) and (max-width: 1024px){
+	
+	#rightPanel {
+		margin-top:2%;
+	}
+	
+	.padding2 {
+		padding-bottom:0;
+	}
+	
+	.padding {/*Context 20px*/
+		padding-bottom:5%;
+	}
+	
+	#rightSide {
+		height:30em;
+	}
+}
+
+@media screen and (max-device-width: 400px){
+	
+	#rightPanel {
+		max-width:100%;
+		max-height:100%;
+		margin:10% auto 0 auto;
+	}
+	
+	#rightPanel li:last-child {
+		border-bottom:1px #000 solid;
+	}
+	
+	#rightPanel .last-child li:last-child, #rightPanel #submitButtonStyle, #rightPanel #submitButtonStyle li {
+		border:none;
+	}
+	
+    .landingPageText {
+		padding-bottom:10% !important;
+	}
+		
+	#submitButtonStyle {
+		margin-top:8%;
+	}
+}

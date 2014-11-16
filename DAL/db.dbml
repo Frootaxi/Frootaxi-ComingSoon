@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="frootaxi_db" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=frootaxi_db;User ID=frootaxiUser" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="frootaxi_dbConnectionString4" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.region" Member="regions">
+    <Type Name="region">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Association Name="region_client_location" Member="client_locations" ThisKey="id" OtherKey="region_id" Type="client_location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payment_account_type" Member="payment_account_types">
+    <Type Name="payment_account_type">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="payment_account_type_payment_account" Member="payment_accounts" ThisKey="id" OtherKey="type_id" Type="payment_account" />
+    </Type>
+  </Table>
+  <Table Name="dbo.client_location" Member="client_locations">
+    <Type Name="client_location">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="region_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="city_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="suburb_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="area_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="landmark_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gps_coordinate" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Association Name="client_location_client" Member="clients" ThisKey="id" OtherKey="location_id" Type="client" />
+      <Association Name="region_client_location" Member="region" ThisKey="region_id" OtherKey="id" Type="region" IsForeignKey="true" />
+      <Association Name="city_client_location" Member="city" ThisKey="city_id" OtherKey="id" Type="city" IsForeignKey="true" />
+      <Association Name="suburb_client_location" Member="suburb" ThisKey="suburb_id" OtherKey="id" Type="suburb" IsForeignKey="true" />
+      <Association Name="area_client_location" Member="area" ThisKey="area_id" OtherKey="id" Type="area" IsForeignKey="true" />
+      <Association Name="landmark_client_location" Member="landmark" ThisKey="landmark_id" OtherKey="id" Type="landmark" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.city" Member="cities">
+    <Type Name="city">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="city_client_location" Member="client_locations" ThisKey="id" OtherKey="city_id" Type="client_location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.suburb" Member="suburbs">
+    <Type Name="suburb">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="suburb_client_location" Member="client_locations" ThisKey="id" OtherKey="suburb_id" Type="client_location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.area" Member="areas">
+    <Type Name="area">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Association Name="area_client_location" Member="client_locations" ThisKey="id" OtherKey="area_id" Type="client_location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.landmark" Member="landmarks">
+    <Type Name="landmark">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="landmark_client_location" Member="client_locations" ThisKey="id" OtherKey="landmark_id" Type="client_location" />
+    </Type>
+  </Table>
+  <Table Name="dbo.client" Member="clients">
+    <Type Name="client">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="first_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="last_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="location_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="payment_account_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_time_stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="client_client_activation_code" Member="client_activation_codes" ThisKey="id" OtherKey="client_id" Type="client_activation_code" />
+      <Association Name="client_user" Member="users" ThisKey="id" OtherKey="client_id" Type="user" />
+      <Association Name="client_location_client" Member="client_location" ThisKey="location_id" OtherKey="id" Type="client_location" IsForeignKey="true" />
+      <Association Name="driver_car_gps_mapping_client" Member="driver_car_gps_mapping" ThisKey="id" OtherKey="client_id" Type="driver_car_gps_mapping" IsForeignKey="true" />
+      <Association Name="payment_account_client" Member="payment_account" ThisKey="payment_account_id" OtherKey="id" Type="payment_account" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.client_activation_code" Member="client_activation_codes">
+    <Type Name="client_activation_code">
+      <Column Name="client_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mobile_activation_code" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="email_activation_code" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="activated_mobile" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activated_email" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date_time_stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="client_client_activation_code" Member="client" ThisKey="client_id" OtherKey="id" Type="client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.subscribe" Member="subscribes">
+    <Type Name="subscribe">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="email_address" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="date_time_stamp" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.promotion_code" Member="promotion_codes">
+    <Type Name="promotion_code">
+      <Column Name="code" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.package" Member="packages">
+    <Type Name="package">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="trip_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trip_maximum_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="free_trip_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="free_trip_maximum_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.error_log" Member="error_logs">
+    <Type Name="error_log">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="client_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="source_of_error" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="location_of_source" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="error_message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="notification_message_sent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="date_time_stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.email" Member="emails">
+    <Type Name="email">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="recipient_email_address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="message" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="time_entered_in_db" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="subject" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="message_format" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="email_sent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="time_sent" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.password_reset" Member="password_resets">
+    <Type Name="password_reset">
+      <Column Name="client_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="expiration_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="password_reset_token" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.gps_coordinate" Member="gps_coordinates">
+    <Type Name="gps_coordinate">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="msisdn" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Column Name="gps_imei" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="gps_serial_number" Type="System.String" DbType="NChar(12)" CanBeNull="true" />
+      <Column Name="latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="date_time_stamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="gps_coordinate_driver_car_gps_mapping" Member="driver_car_gps_mappings" ThisKey="gps_imei" OtherKey="gps_imei" Type="driver_car_gps_mapping" />
+    </Type>
+  </Table>
+  <Table Name="dbo.driver_car_gps_mapping" Member="driver_car_gps_mappings">
+    <Type Name="driver_car_gps_mapping">
+      <Column Name="client_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="car_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="gps_imei" Type="System.String" DbType="NChar(15)" CanBeNull="true" />
+      <Column Name="msisdn" Type="System.String" DbType="VarChar(12)" CanBeNull="true" />
+      <Association Name="driver_car_gps_mapping_client" Member="clients" ThisKey="client_id" OtherKey="id" Type="client" />
+      <Association Name="gps_coordinate_driver_car_gps_mapping" Member="gps_coordinate" ThisKey="gps_imei" OtherKey="gps_imei" Type="gps_coordinate" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.role" Member="roles">
+    <Type Name="role">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="role_user" Member="users" ThisKey="id" OtherKey="role_id" Type="user" />
+    </Type>
+  </Table>
+  <Table Name="dbo.price_matrix" Member="price_matrixes">
+    <Type Name="price_matrix">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="off_peak_start_time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="off_peak_end_time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="peak_start_time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="peak_end_time" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="off_peak_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="peak_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="weekend_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="midnight_cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="start_coord" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="end_coord" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[user]" Member="users">
+    <Type Name="user">
+      <Column Name="client_id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="email_address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="primary_mobile_number" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="secondary_mobile_number" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="role_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="account_activated" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="user_trip_detail" Member="trip_details" ThisKey="client_id" OtherKey="user_id" Type="trip_detail" />
+      <Association Name="role_user" Member="role" ThisKey="role_id" OtherKey="id" Type="role" IsForeignKey="true" />
+      <Association Name="client_user" Member="client" ThisKey="client_id" OtherKey="id" Type="client" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trip_detail" Member="trip_details">
+    <Type Name="trip_detail">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="cost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trip_coordinates" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="datetimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="request_datetimestamp" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="trip_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="trip_duration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="user_trip_detail" Member="user" ThisKey="user_id" OtherKey="client_id" Type="user" IsForeignKey="true" />
+      <Association Name="trip_type_trip_detail" Member="trip_type" ThisKey="trip_type_id" OtherKey="id" Type="trip_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.trip_type" Member="trip_types">
+    <Type Name="trip_type">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="trip_type_trip_detail" Member="trip_details" ThisKey="id" OtherKey="trip_type_id" Type="trip_detail" />
+    </Type>
+  </Table>
+  <Table Name="dbo.payment_account" Member="payment_accounts">
+    <Type Name="payment_account">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="expiration_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="payment_account_client" Member="clients" ThisKey="id" OtherKey="payment_account_id" Type="client" />
+      <Association Name="payment_account_type_payment_account" Member="payment_account_type" ThisKey="type_id" OtherKey="id" Type="payment_account_type" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SendEmail" Method="SendEmail" IsComposable="true">
+    <Parameter Name="my_message" Type="System.String" DbType="NText" />
+    <Parameter Name="my_recipient_email_address" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="my_subject" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="my_email_format" Type="System.String" DbType="NVarChar(20)" />
+    <Return Type="object" />
+  </Function>
+</Database>

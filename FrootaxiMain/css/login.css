@@ -1,0 +1,304 @@
+﻿/** NB: Device-width dependent **/
+
+.title3, #toRight p, #toRight p a {
+	color:#9a9a9a;
+}
+
+.title3 {
+	font-size:100%;
+	font-weight:lighter;
+	text-shadow:0;
+}
+
+#toRight{
+	margin:4% 2.25% 0 0;
+}
+
+#toRight .loginInput, #toRight .loginInput p {
+    width:100%;
+	height:100%;
+}
+
+#toRight .loginInput p {
+	width:70%;
+	text-align:left;
+	float:left !important;
+}
+
+#toRight .loginInput .button {
+	float:right;
+}
+
+#toRight li p {
+	font-size:0.75em;
+	text-align:right;
+	padding:1% 0 0 0;
+	max-width:100%;
+	float:right;
+}
+
+#toRight li {
+	padding:0 0 3% 0;
+	float:none;
+}
+
+.defaultButtons{
+	padding: 3.5% 0 !important;
+}
+
+.textBox {/*context 14px*/
+	margin:0;
+	width:100%;
+	height:100%;
+	font-size:0.75em;
+}
+
+.button{
+	margin-top:0;
+	margin-bottom:0;
+	float:right;
+	min-width:30%;
+	min-height:70%;
+	background-color:#fff;
+	font-size:0.75em;
+	font-weight:300;
+	color:#000;
+}
+
+.button:hover {
+	color:#999;
+}
+
+.button:active {
+	color:#cecece;
+}
+
+.bottomRight li a{
+	text-align:right;
+	font-size:1em;
+	font-weight:700;
+	padding:0;
+	margin:0;
+}
+
+
+@media only screen and (min-width: 1225px) {
+	
+	#toRight{
+	    margin-top:7%;
+	    padding:0 3%;
+	    height:15em;
+    }
+	
+	#bottomLeft li:last-child{
+		padding-right:0;
+	}
+	
+	.bottomRight {
+	    padding-right:3.8%;
+	}
+	
+	.bottomRight li {
+		font-size:0.75em;
+		padding:1.1em 0 0.263em 0;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+    
+    .top {
+        display:none !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) 
+{
+    
+    #bottomLeft {
+        min-width:100%;
+    }
+	
+	#topRight li {
+		padding:0;
+		float: right !important;
+		min-width:12.5%;
+	}
+	
+	#topRight li p {
+		margin-bottom:0;
+		height:1.5em !important;
+	}
+    
+    .bottom {
+        display:none !important;
+    }
+    
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1224px) {
+	
+	#toRight{
+		margin:0;
+		height:100%;
+		padding: 6% 3% 0 3%;
+	}
+	
+	#toRight li {/*context 14px*/
+		width:90%;
+		float:right;
+	}
+	
+	#toRight ul {
+		margin-top:8% !important;
+		max-height:100%;
+	}
+	
+	.button{
+		margin-bottom:0;
+	}
+	
+	.bottomRight {
+		min-width:36%;
+	}
+
+	#bottomLeft li{
+		min-width:12%;
+	}
+	
+	#bottomLeft li:last-child{
+		padding-right:0;
+	}
+	
+	.bottomRight li {
+		font-size:0.75em;
+		float:right;
+		min-width:100% !important;
+	}
+}
+
+@media screen and (min-device-width: 481px) and (max-width: 1024px) {
+	
+	#topRight li {
+        padding: 0;
+        float: right !important;
+        min-width: 12.5%;
+    }
+	
+	#topRight li p {
+        margin-bottom: 0;
+        height:1.5em !important;
+    }
+
+    #leftSide {
+		height:100%;
+	}
+	
+	#toRight {
+	    width:50%;
+		min-height:18em !important;
+		height:100%;
+		margin:0 auto;
+		clear:both;
+	}
+		
+	#bottomBg {
+		margin: 0 auto 0.6% auto;
+		clear:both;
+	}
+		
+	.register fieldset.last-child {
+		margin:0;
+	}
+	
+	.register ul {
+		margin:0.875em auto 0 auto;
+	}
+    
+    #middleContent{
+		padding:1em 0;
+		height:100%;
+		max-width:100%;
+		margin: 0.3125em auto;
+	}
+
+	.bottomRight{
+		display:block;
+		float:right !important;
+	}
+	
+	.bottomRight li {
+		padding-top:6% !important;
+		
+	}
+		
+	#toRight ul{
+		margin:0.875em auto 0 auto;
+		width:80%;
+		height:100%;
+	}
+	
+	#toRight li p {
+		font-size:0.75em;
+		text-align:left;
+		width:100%;
+		margin:0;
+		padding:0;
+		float:none;
+	}
+	
+	#toRight li {
+		width:100%;
+		padding:0 0 1% 0;
+	}	
+}
+
+@media screen and (max-device-width:400px) {
+	
+	#middleContent{
+		min-height:100%;
+		max-width:100%;
+		margin: 0 auto;
+	}
+	
+	#topRight li a {
+	    font-size:100% !important;
+	}
+
+	.bottomRight{
+		display:block;
+		width:99%;
+		margin:0 auto;
+	}
+	
+	.bottomRight li {
+		padding-top:6% !important;
+	}
+	
+	#toLeft ul{
+		width:90%;
+		height:100%;
+		margin: 0 auto;
+	}
+		
+	#toRight ul{
+		margin:2.5em auto 0 auto;
+		width:90%;
+		height:100%;
+	}
+	
+	#toRight li p {
+		font-size:0.75em;
+		text-align:justify;
+		max-width:100%;
+		float:none !important;
+		margin:5% 0;
+		padding:0;
+	}
+	
+	#socialMediaLinks ul {
+		width:90%;
+		height:2.25em !important;
+		margin:0 auto !important;
+	}
+
+}

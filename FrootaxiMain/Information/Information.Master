@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Information.master.cs" Inherits="FrootaxiMain.Information.Information" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+    <link href="../css/typography.css" rel="stylesheet" type="text/css" />
+    <link href="../css/information.css" rel="stylesheet" type="text/css" />
+    
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39444740-1']);
+        _gaq.push(['_setDomainName', 'frootaxi.com']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
+    <!--[if !IE]>-->
+    <style type="text/css">
+	    body {
+	        font-size:16px;
+	    }
+    </style>
+    <!--<[endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+		<div id="leftSide">
+			<div id="middlePanel" >
+				<div id="middleContent">
+					<fieldset id="toLeft">
+						<ul class="middleContent">
+							<li><a href="../Default.aspx"><img src="../images/logo-big.png" id="logo" alt="Frootaxi Logo" /></a></li>
+                        </ul>
+					</fieldset>
+					<fieldset id="toRight">
+                        <legend>
+                        <asp:ContentPlaceHolder ID="info_title" runat="server">
+                        
+                        </asp:ContentPlaceHolder>
+                        </legend>
+                        <div id="info_text">
+                            <asp:ContentPlaceHolder ID="info_content" runat="server">
+        
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </fieldset>
+					<fieldset id="submitButtonStyle">
+						<ul>
+							<li id="footer"><p>Copyright &copy; 2013  Frootaxi , All rights reserved.</p></li>
+						</ul>
+					</fieldset>
+				</div><!--end of middleContent-->
+			</div><!--end of middlePanel-->
+		</div><!--end of leftSide-->
+	</div>    
+    </form>
+</body>
+</html>

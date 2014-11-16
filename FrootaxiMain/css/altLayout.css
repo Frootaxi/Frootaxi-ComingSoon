@@ -1,0 +1,17 @@
+﻿
+@media only screen and (min-width: 1025px){
+
+    #leftSide {
+        margin:0 auto !important;
+        float:none;
+    }
+
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    #middlePanel {
+        margin:auto !important;
+    }
+    
+}

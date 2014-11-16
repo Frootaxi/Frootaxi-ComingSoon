@@ -1,0 +1,2038 @@
+﻿/** NB: Device-width dependent **/
+
+*{
+	margin:0;
+	padding:0;
+	border:none;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+body{
+	background-image: url('../images/day.jpg');
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#rightSideContent_UpdatePanel4 ul li{
+    margin: 8px 0px;
+    font-size: 13px;
+}
+
+#rightSideContent_UpdatePanel4 ul li span {
+    padding: 0.25em;
+}
+
+#divDuration
+{
+    display:none;
+    /*padding-bottom: 15px;*/
+}
+
+#packages {
+    background-color: rgba(233, 233, 233, 0.72);
+}
+
+#middleContent, #bottomBg, #top {
+    background-color: rgba(0, 0, 0, 0.72);
+    color: rgba(0, 0, 0, 0.72);
+}
+
+#toRight {
+    position:relative;
+}
+
+.landingPageText {
+	width:100%;
+}
+
+.imgContainer {
+	width:36px;
+	height:36px;
+	margin:0 0.4375em 0 0;
+	display:block;
+	float:left;
+	overflow:hidden;
+}
+
+.lpi1 {
+	background:transparent url('../images/landingPgSprite.png')no-repeat 0 0;
+}
+
+.lpi2 {
+	background:transparent url('../images/landingPgSprite.png')no-repeat -36px 0;
+}
+
+.lpi3 {
+	background:transparent url('../images/landingPgSprite.png')no-repeat -72px 0;
+}
+
+#appIcons {
+	height:2.625em;
+}
+
+#android{
+	background:transparent url('../images/appSprite.png')no-repeat 0 0;
+}
+	
+#ios{
+	background:transparent url('../images/appSprite.png') no-repeat -1.1875em 0;
+}
+	
+#blackberry{
+	background:transparent url('../images/appSprite.png') no-repeat -2.375em 0;
+}
+	
+#windows{
+	background:transparent url('../images/appSprite.png') no-repeat -3.5625em 0;
+}
+
+#android:hover{
+	background-position: 0 -1.3125em;
+}
+	
+#ios:hover{
+	background-position: -1.1875em -1.3125em;
+}
+	
+#blackberry:hover{
+	background-position: -2.375em -1.3125em;
+}
+
+#windows:hover{
+	background-position: -3.5625em -1.3125em;
+}
+
+#socialMediaLinks ul {
+	margin-top:20%;
+}
+
+#socialMediaLinks li{
+	width: 33% !important;
+    height:1.125em !important;
+    float: left !important;
+    display: block;
+    padding:0 !important;
+    position:relative;
+}
+
+.icon{
+    width: 1.125em !important;
+    height:1.125em !important;
+    margin: 0px 1.21875em;
+    display:block;
+    overflow:hidden;
+    background:transparent url('../images/socialMediaSprite.png')no-repeat 0 0;
+}
+
+.facebook{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat 0 0 !important;
+}
+
+.facebook:hover{
+	background-position:0 -1.125em !important;
+}
+
+.twitter{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat -1.125em 0 !important;
+}
+
+.twitter:hover{
+	background-position:-1.125em -1.125em !important;
+}
+
+.linkedIn{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat -2.25em 0 !important;
+}
+
+.linkedIn:hover{
+	background-position:-2.25em -1.125em !important;
+}
+
+.style {
+	margin: 2em 0;
+}
+
+.large-font {
+    font-size:1.5em;
+}
+
+/*.ui-slider {
+    background: none;
+    height:0.75em !important;
+}*/
+
+.space {
+    margin: 23% 0 5% 0;
+}
+
+.no-space {
+    margin-top:0 !important;
+}
+
+#divMPower, #divExpressPay {
+    display:none;
+}
+
+.ui-dialog {
+    z-index:10000 !important;
+}
+
+.hide
+{
+    /*display:none !important;*/
+    position:absolute;
+    top:-1000px;
+}
+
+.close {
+    display:none !important;
+}
+
+.show
+{
+    display:block !important;
+}
+
+.fixed
+{
+    position: fixed !important;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.50;
+    -khtml-opacity: 0.50;
+    opacity: 0.50;
+    z-index:99999;
+}
+
+.cursor
+{
+    cursor:not-allowed;
+}
+
+.tooltip{
+    position:absolute;
+    z-index:999;
+    left:-9999px;
+    background-color:transparent;
+    padding:2px;
+    border:1px solid #fff;
+    width:250px;
+}
+
+.tooltip p{
+    margin:0;
+    padding:0;
+    color:#fff;
+    background-color:#222;
+    padding:2px 7px;
+}
+
+#clearMarkers
+{
+    width:25px;
+    height:25px;
+    padding:25px 25px 0 0;
+    position:absolute;
+    right:0.5%;
+    top:60%;
+    z-index:999;
+    background:url('../images/clear_taxi.png') no-repeat;
+    cursor:pointer;
+    opacity:0.5;
+}
+
+#clearMarkers:hover
+{
+    top:59.8% !important;
+    right:0.2% !important;
+    opacity:1 !important;
+}
+
+#clearMarkers:active
+{
+    top:60% !important;
+    right:0.5% !important;
+    opacity:1 !important;
+}
+
+.trip_confirmation_text{
+    margin: 10px 0 0 10px;
+    float:right;
+}
+
+#map-canvas-snapshot {
+    width: 235px;
+    height: 200px;
+    float:left;
+    margin:20px 0 0 0;
+}
+
+.trip_cost {
+    margin:33px auto 0 auto;
+    background:none;
+    width:220px !important;
+    text-align:center !important;
+    font-size:31px;
+}
+
+.trip_dets li, .trip_confirmation_text {
+    width:45%;
+    color:#000;
+    font-size:13px;
+    display: inline-block;
+    background-color:transparent;
+}
+
+.trip_dets li {
+    margin:0 0 0 18px;
+}
+
+.trip_dets li label {
+    float: left;
+    font-weight:600;
+}
+
+.trip_dets li input {
+    float: right;
+}
+
+.trip_dets li input, .trip_dets li label {
+    margin: 0px;
+    line-height: 20px;
+}
+
+.billing_dets li{
+    width:55%;
+    color:#000;
+    padding: 0 !important;
+    float: none !important;
+    min-height: 0 !important;
+    display: inline-block;
+}
+
+.billing_dets li {
+    margin:0 0 0 5px;
+}
+
+.billing_dets li label {
+    float: left;
+    font-size:11px;
+    width: 7.1em;
+}
+
+.billing_dets li input {
+    float: right;
+    color: rgba(255, 255, 255, 1);
+    font-size:11px !important;
+}
+
+.billing_dets li input, .billing_dets li label {
+    margin: 0px;
+}
+
+.search_address {
+	position:absolute;
+	background-color: rgba(245, 205, 46, 0.72);
+	width: 71.6%;
+	height:2.875em;
+	padding:0.71429em;
+	top:2%;
+	left:1.2%;
+	z-index:999;
+}
+
+#tripSummary {
+    position:absolute;
+	background-color:rgba(185, 147, 20, 0.64);
+	width: 45.6%;
+	height:7.875em;
+	padding:0.71429em;
+	top:2%;
+	right:1.2%;
+	z-index:999;
+    font-size:11px;
+    color:#F2C717;
+}
+
+.tripSummaryText {
+    background-color:#222;
+}
+
+.big {
+    padding: 10px !important;
+    color: #fff !important;
+}
+
+.adjustMargin {
+    margin:20px 0 30px 0 !important;
+}
+
+.ui-autocomplete {
+    width: 20%;
+}
+
+.ui-accordion-content {
+    background:none !important;
+}
+	
+.search {
+	width: 26%;
+	padding:3% 0;
+	top:2%;
+	z-index:999;
+}
+	
+.hail {
+	width: 97.6%;
+	padding:0.71429em;
+	bottom: 4.5%;
+	left:1.2%;
+	z-index:999;
+}
+	
+._button {
+	background-color: rgba(0, 0, 0, 0.72);
+	position:absolute;
+	color:#9a9a9a;
+	height:2.875em;
+	right:1.2%;
+	border:none;
+	font-size:0.875em;
+	cursor:pointer;
+}
+
+.toggle_button {
+	background:transparent url('../images/please_wait.gif') no-repeat center center;
+    background-color:#000;
+	position:absolute;
+	/*height:2.875em;*/
+    height:2.7em;
+	right:1.2%;
+	border:none;
+	cursor:wait;
+}
+	
+#map-canvas, #map-canvas-2{
+    width:100%; height:19.97em; margin:0 0 0.5em 0; padding:0; position:relative;
+}
+
+.gm-style div,.gm-style span,.gm-style label,.gm-style a {
+    font-family: 'Open Sans'; 
+    font-size:9px;
+    font-weight:300;
+    text-align:center;
+}
+
+.gm-style img {
+    border: 0; 
+    padding: 0;
+    margin: 0
+}
+
+.add_calendar {
+    width:90% !important;
+    margin-right:2.5% !important;
+}
+
+.pos_rel {
+    position:relative;
+}
+
+.container_close {
+    font-weight:600;
+    padding:0 !important;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor:pointer;
+}
+
+#divHelpTip, #divHelpTip1, #divHelpTip2 {
+    display:none;
+    position:absolute;
+    z-index:9999;
+    /*width:180px;*/
+    left:135px;
+    top:-8px;
+    padding:21px 15px 10px 15px !important;
+    background-color:#000;
+}
+
+#divHelpTip2 {
+    left: 190px !important;
+    right: -55px;
+}
+
+.helpText {
+    color:#fff;
+    font-size:12px;
+}
+
+#payg_details {
+    display:none; /* Hide the DIV */
+    position:absolute;  
+    _position:absolute; /* hack for internet explorer 6 */ 
+    background-color:#fff;  
+    opacity:1 !important;
+    left: 32%;
+    top: 15%;
+    z-index:100000;
+    height:380px;
+    width:500px;
+    padding: 26px 20px;
+    border-radius: 3px;
+}
+
+#payg_details h3 {
+    line-height: 43px;
+    border-bottom: 1px solid #000;
+    color:#000;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.top_payg_content
+{
+    min-height:225px;
+}
+
+.bottom_payg_content
+{
+    width:100% !important; 
+    height:50px;
+}
+
+.confirm_button{
+    background-color:#F2C717;
+    color: #fff !important;
+}
+
+.confirm_button:hover{
+    color: #8A7006 !important;
+}
+
+.alt
+{
+    min-width:49% !important;
+}
+
+.bright
+{
+    float:right;
+}
+
+.bleft
+{
+    float:left;
+}
+
+a{ 
+    cursor: pointer; 
+}
+
+.help {
+	position:absolute;
+	margin:0 2%;
+    padding:0 !important;
+	cursor:help;
+}
+
+.bubbleTip {
+		height:2em;
+		width:2em;
+		display:block;
+		right:136px;
+		overflow:hidden;
+		margin:-1.3em 0px 0px 21.13em;
+		position:absolute;
+		background:transparent url('../images/lBubbleTip.png') no-repeat 0 0;
+	}
+
+#rightSideContent_UpdatePanel7 select {
+    width: 49% !important;
+    margin: 0 0 0.71429em 0;
+    height: 2.875em;
+    padding: 0.71429em;
+    background-color: #f6d758 !important;
+    position: relative;
+}
+
+/* This is for the positioning of the Close Link */
+#popupBoxClose {
+    font-size:20px;  
+    line-height:15px;  
+    right:5px;  
+    top:5px;  
+    position:absolute;
+    font-weight:400;
+    padding:5px 10px 10px 10px;
+    color: #061B1B; 
+    margin:3px; 
+}
+#popupBoxClose:hover {
+    color:#F2C717;
+}
+
+.small_width {
+    width: 30.3% !important;
+}
+
+#noJavaScriptEnabled {
+    display:none;
+}
+
+/*#body_txtPromotionCode {
+	display:none;
+}*/
+
+#footer{
+	clear:both;
+	/*margin:60px auto 10px auto;*/
+	height:100%;
+	width:100%;
+}
+
+
+/*Beginning of media queries*/
+
+@media only screen and (min-width: 1225px) {
+
+	#packages {
+		display:none;
+		z-index:14;
+		position:absolute;
+		top:63em;
+		right:28em;
+		max-height:100%;
+		width:23em;
+		margin-right:1.25em;
+		padding:0.75em 1.875em 0.75em 1.875em;
+	}
+
+    #packages .container_close, .container_close {
+        font-size:15px;
+    }
+
+    #packages .container_close {
+        color:#000;
+    }
+
+    .container_close {
+        color:#fff;
+    }
+	
+	p.price {
+		font-size:1.5em;
+		font-weight:900;
+		width:100%;
+        margin:0 auto 0.0625em auto;
+	}
+	
+	#packages ul {
+		width:18em;
+	}
+	
+	#packages2 {
+		display:none;
+	}
+	
+	#packages li .bubbleTip{
+		height:2em;
+		width:2em;
+        top: 40px;
+        right:-24px;
+		display:block;
+		float:right;
+		overflow:hidden;
+		margin:-1.5em 0 0 21.13em;
+		position:absolute;
+		background:transparent url('../images/bubbleTip.png') no-repeat 0 0;
+	}
+
+    /*.bubbleTip {
+		height:2em;
+		width:2em;
+		display:block;
+		right:170px;
+		overflow:hidden;
+		margin:-1.3em 0px 0px 21.13em;
+		position:absolute;
+		background:transparent url('../images/lBubbleTip.png') no-repeat 0 0;
+	}*/
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1224px) {
+
+	#packages {
+		display:none;
+		position:absolute;
+		z-index:14;
+		top:80%;
+		right:17%;
+		width:23.5357em;
+		max-height:100%;
+		height:30.5em;
+		margin-right:10%;
+		padding:0.75em 1.875em 0.75em 1.875em;
+	}
+	
+	p.price {
+		width:100%;
+	}
+	
+	#packages ul {
+		width:18em;
+	}
+	
+	.help { /*Might be related to register packages list and default.aspx trip type tips*/
+		position:absolute;
+		/*margin:0.5% 0.5% 0 0.5%;*/
+        padding:0 2% !important;
+		cursor:pointer;
+	}
+
+    #divHelpTip, #divHelpTip1 {
+        right: -35px;
+    }
+
+    #divHelpTip2 {
+        left: -150px !important;
+        right: 235px;
+    }
+
+    #divHelpTip .bubbleTip, #divHelpTip1 .bubbleTip {
+        left: -295px !important;
+        right: 25px;
+    }
+
+    #divHelpTip2 .bubbleTip {
+        height: 2em;
+        width: 2em;
+        display: block;
+        left: -147px !important;
+        right: 235px;
+        overflow: hidden;
+        margin: -1.3em 0px 0px 21.13em;
+        position: absolute;
+        background: url('../images/BubbleTip.png') no-repeat scroll 0px 0px transparent;
+        top: 25px;
+    }
+	
+	#packages2 {
+		display:none;
+	}
+	
+	#packages li .bubbleTip {
+		height:2em;
+		width:2em;
+		display:block;
+		float:right;
+		overflow:hidden;
+		margin:-4% 0 0 92%;
+		position:absolute;
+		background:transparent url('../images/bubbleTip.png') no-repeat 0 0;
+	}
+}
+
+@media only screen and (min-width: 1025px){
+
+	#top{
+		display:none;
+	}
+	
+	.lpi1 {
+		margin:-3% 0 0 -3.7%;
+	}
+	
+	.lpi2 {
+		margin-top:-3%;
+	}
+	
+	.lpi3 {
+		margin:-2% 2% 0 -1%;
+	}
+}
+
+@media only screen and (max-width: 1024px){
+	
+	.help {
+		display:none;
+	}
+	
+	#packages {
+		display:none;
+	}
+}
+
+
+/* Screens 1225px and above */
+
+@media screen and (min-width : 1225px) {
+    #wrapper {
+        margin: 0 auto;
+        max-width: 76.5em;
+        height: 100%;
+    }
+
+    p {
+        width: 21.875em;
+        margin: 0 auto;
+        margin-bottom: 0.9375em;
+    }
+
+    #leftSide {
+        width: 50em; /*800px*/
+        height: 100%;
+        float: left;
+        clear: left;
+        position: relative;
+    }
+
+    #middleContent {
+        padding: 0;
+        height: 20em;
+        width: 100%;
+        margin: 7.125em 0 0.3125em 0;
+    }
+
+    #toLeft { /*Context is font=16px*/
+        width: 24.8em;
+        height: 20em;
+        padding: 0.625em 0.725em 0px 0.725em;
+        float: left;
+    }
+
+    .img {
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+    }
+
+    #logo {
+        height: 6.3125em;
+        display: block;
+        margin: 0.625em auto 0.125em auto;
+    }
+
+    #appIcons ul {
+        width: 10.9375em;
+        margin: 0 auto;
+    }
+
+    #appIcons li {
+        display: block;
+        float: left;
+        height: 2.625em;
+        line-height: 3.8125em;
+    }
+
+    .link {
+        display: block;
+        margin: 0px 0.75em;
+        width: 1.1875em;
+        height: 1.3125em;
+        overflow: hidden;
+        background: transparent url('../images/appSprite.png')no-repeat 0 0;
+    }
+
+    #toRight { /*Context font=20px*/
+        width: 24em;
+        height: 20em;
+        margin: 0;
+        padding: 0;
+        float: right;
+    }
+
+    .middleContent {
+        min-height: 12.1875em !important;
+        position: relative;
+        width: 100%;
+    }
+
+    #toRight li {
+        width: 100%;
+        min-height: 2.5em;
+        padding: 0.45em 0.25em;
+        float: right;
+    }
+
+    .defaultButtons {
+        background-color: rgba(245, 205, 46, 0.82);
+        text-align: center;
+        font-size: 0.9em;
+        width: 15.275em !important;
+        height: 2.5em;
+        margin: 0 1.75em 0.55em 0;
+    }
+
+        .defaultButtons:first-child {
+            margin-top: 4em;
+        }
+
+        .defaultButtons:last-child {
+            margin: 0 1.75em 0 0;
+            height: 3.5em;
+        }
+
+    .alt_settings {
+        height: 2.5em !important;
+        width: 100% !important;
+        margin-top: 1.5em !important;
+    }
+
+    .defaultButtons a {
+        text-align: center;
+    }
+
+    #socialMediaLinks ul {
+        width: 10.9375em; /*26.71875em*/
+        height: 1.125em;
+        margin: 1.625em auto 0 auto;
+    }
+
+    #bottomBg { /*Context font=19px?*/
+        min-width: 43.8em;
+        margin: 0;
+        padding: 0.263em 0.526em;
+    }
+
+    #bottom li {
+        display: block;
+        float: left;
+    }
+
+    #bottomLeft {
+        display: block;
+        float: left;
+    }
+
+        #bottomLeft li {
+            padding: 0.526em 2em 0.263em 0.526em;
+        }
+
+    .bottomRight {
+        display: block;
+        float: right;
+        padding-right: 2.5%;
+    }
+
+        .bottomRight li {
+            padding: 0.526em 0 0.263em 2em;
+        }
+
+            .bottomRight li:first-child {
+                padding-left: 0;
+            }
+
+            .bottomRight li:last-child {
+                padding-right: 0;
+            }
+
+            .bottomRight li p {
+                margin: 0;
+                padding: 0;
+            }
+
+            .bottomRight li a {
+                text-align: center;
+            }
+
+    #rightSide { /*Context 16px*/
+        width: 22.875em;
+        float: right;
+        clear: right;
+        margin: 0 0 0 2.8125em;
+        height: 100%;
+        padding: 1.875em 1.875em 0.625em 1.875em;
+        position: relative;
+        background: transparent url('../images/bg_leather.png') repeat;
+    }
+
+    .adjustHeight {
+        /*height: 672px !important;*/
+    }
+
+    .small_height {
+        height:66px !important;
+    }
+
+    .register ul {
+        width: 17.3125em;
+        margin: 0.625em auto;
+    }
+
+    .fixed_height {
+        height:500px;
+        width:100%;
+    }
+
+    .padding { /*Contex 20px*/
+        padding-bottom: 0.5em;
+    }
+
+    select, input, radio {
+        outline: none;
+    }
+
+    .textBox, .dropdownmenu, #frmForgotPassword .textBox { /*context 14px*/
+        margin: 0 0 0.71429em 0;
+        width: 100%;
+        height: 2.875em;
+        padding: 0.71429em;
+        background-color: #f6d758 !important;
+        position: relative;
+    }
+
+    /*.small_width {
+        width:30.3% !important;
+    }*/
+
+        /*For dropdown arrow*/
+
+        .dropdownmenu:after {
+            content: no-close-quote;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: transparent;
+        }
+
+        .textBox.account {
+            margin: 0;
+        }
+
+    #AccountExpirationRow { /*Context 20px*/
+        height: 2.875em;
+        width: 100%;
+        position: relative;
+        display: none;
+    }
+
+        #AccountExpirationRow ul {
+            width: 100%;
+            height: 100%;
+        }
+
+        #AccountExpirationRow li {
+            display: block;
+            float: left;
+            height: 100%;
+            width: 33%;
+        }
+
+        #AccountExpirationRow .ddlTextStyle {
+            margin: 0 1% 0 0;
+        }
+
+    .ddlStyle {
+        width: 100%;
+        height: 100%;
+        padding: 0.625em;
+        background-color: #f6d758;
+    }
+
+    #AccountExpirationRow li:last-child {
+        margin: 0 0 8% 0;
+    }
+
+    fieldset#submitButtonStyle {
+        width: 100%;
+        min-height: 100%;
+        clear: both;
+    }
+
+        fieldset#submitButtonStyle ul {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+    .button {
+        padding: 3% 0;
+        margin: 5% 0 23% 0;
+        min-width: 100%;
+        /*min-height:100%;*/
+    }
+
+    .btn_small {
+        min-width:50% !important;
+        margin:0 !important;
+    }
+
+    .shift_down {
+        /*margin-top: 67px;
+        margin-bottom: 1% !important;*/
+        margin:0 !important;
+    }
+}
+
+/*Tablets (iPads, Android, Windows) and small screens */
+
+@media only screen and (min-width: 1025px) and (max-width: 1224px) {
+		
+	#wrapper{
+		margin:0 auto;
+		max-width:100%;
+		height:100%;
+	}
+	
+	p{
+		max-width:100%;
+		margin:0 auto;
+		margin-bottom:5%;
+	}
+	
+	#leftSide p{
+		max-width:90%;
+	}
+	
+	#leftSide{
+		width:72%;
+		height:100%;
+		float:left;
+		clear:left;
+		position:relative;
+	}
+	
+	#middleContent {
+		padding:0 ;
+		height:20em;
+		max-width:90%;
+		margin:14.84375% auto 0.65104166666666666666666666666667% auto;
+	}
+	
+	.middleContent {
+	    min-height:61% !important;
+	    position:relative;
+	    width:100%;
+	}
+	
+	#toLeft { /*Context is font=16px*/
+		width:50%;
+		height:100%;
+		float:left;
+	}
+	
+	.img {
+		max-width:100%;
+		-ms-interpolation-mode: bicubic;
+	}
+	
+	#logo{
+		width:80%;
+		height:auto;
+		display:block;
+		margin:4.0983606557377049180327868852459% auto 0.69444444444444444444444444444444% auto;
+	}
+	
+	#appIcons ul{
+		width: 43.75%; /*26.71875em*/
+		height:2.25em;
+		margin:0 auto;
+	}
+	
+	#appIcons li{
+		display: block;
+		float: left;
+		width: 25%;
+	    height:1.26em;
+	    padding:0;
+	    position:relative;
+	    overflow:hidden;
+	}
+	
+	.link{
+	    display:block;
+	    margin:0 auto;
+	    width: 1.1875em;
+	    height:2.625em;
+	    overflow:hidden;
+	    background:transparent url('../images/appSprite.png')no-repeat 0 0;
+	}
+	
+	#toRight{/*Context font=20px*/
+		width:50%;
+		height:100%;
+		margin:0;
+		float:right;
+	}
+	
+	#toRight li{
+		width: 90%;
+	    height:17.361111111111111111111111111111%;
+	    padding: 3.5% 0;
+	    float:right;
+	}
+	
+	.defaultButtons {
+		background:url('../images/defaultButton.png') repeat;
+		text-align:center;
+		height:6.9444444444444444444444444444444%;
+		margin: 0px 8% 3% 0px;
+	}
+	
+	.defaultButtons:first-child {
+        margin-top: 18%;
+    }
+    
+    .alt_settings {
+	    margin:0 !important;
+	}
+	
+	#socialMediaLinks ul{
+		width: 43.75%; /*26.71875em*/
+		height:2.25em;
+		margin:5% auto 0 auto;
+	}
+	
+	.icon {
+	    float:right;
+	}
+
+	#bottomBg {
+		width:90% !important;
+		margin: 0 auto;
+		clear:both;
+	    padding:0.5%;
+	}
+	
+	#bottom li{
+		display: block;
+		float: left;
+	}
+	
+	#bottomLeft{
+		display: block;
+		float: left;
+		width:60%;
+	}
+	
+	#bottomLeft li{
+		padding:1% 8% 1.315% 1.4%;
+		min-width:10%;
+	}
+	
+	.bottomRight{
+		display: block;
+		float: right;
+		margin-right:1%;
+		width:18%;
+	}
+	
+	.bottomRight li:first-child {
+		padding-left:0 !important;
+	}
+	
+	.bottomRight li{
+		padding:3.7% 0px 0px 14%;
+		text-align:right;
+		display:block;
+		float:left;
+	}
+	
+	.bottomRight li:last-child {
+		padding-right:0;
+	}
+	
+	.bottomRight li p {
+	    margin-right:6%;
+	    float:right;   
+	}
+		
+	#rightSide{/*Context 16px*/
+		max-width:28%;
+		max-height:174%;
+		margin:0;
+		float: right;
+		clear:right;
+		padding:2% 2% 0.625em 2%;
+		background: transparent url('../images/bg_leather.png') repeat;
+	}
+	
+	.register ul {
+		width:95%;
+		margin:1.25em auto;
+	}	
+		
+	.padding{/*Context 20px*/
+		padding-bottom:10%;
+	}
+	
+	select, input, radio {
+		outline:none;
+	}
+	
+	.textBox, .dropdownmenu {/*context 14px*/
+		margin:0 0 0.71429em 0;
+		width:100%;
+		height:2.875em;
+		padding:0.71429em;
+		background-color: #f6d758;
+		position:relative;
+	}
+	
+	/*For dropdown arrow*/
+	
+	.dropdownmenu:after{
+		content:no-close-quote;
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		background: transparent;
+	}	
+		
+	.textBox.account{
+		margin:0;
+	}
+	
+	#AccountExpirationRow{/*Context 20px*/
+		height:2.875em;
+		width:100%;
+		position:relative;
+		display:none;
+	}
+	
+	#AccountExpirationRow ul {
+		width:100%;
+		height:100%;
+	}
+	
+	#AccountExpirationRow li{
+		display: block;
+		float: left;
+		height:100%;
+		width:33%;
+	}
+	
+	#AccountExpirationRow .ddlTextStyle{
+		margin:0 1% 0 0;
+	}
+	
+	.ddlStyle {
+		width:100%;
+		height:100%;
+		padding:0.625em;
+		background-color: #f6d758;
+	}
+	
+	#AccountExpirationRow li:last-child {
+		margin:0 0 8% 0;
+	}
+	
+	.style{
+		clear:both;
+	}
+
+	fieldset#submitButtonStyle{
+		width:100%;
+	}
+	
+	fieldset#submitButtonStyle ul{
+		max-width:100%;
+	}
+			
+	.button{
+		padding:3% 0;
+		margin:5% 0 23% 0;
+		min-width:100%;
+		/*min-height:100%;*/
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+	#wrapper{
+		margin:0 auto;
+		max-height:100%;
+	}
+		
+	p{
+		width:21.875em;
+		margin:0 auto;
+		margin-bottom:0.9375em;
+	}
+	
+	.empty {
+		display:none;
+	}
+	
+	#leftSide {
+		width:50em; /*800px*/
+		min-height:100%;
+		margin:0 auto;
+		clear:both;
+	}
+	
+	#top {/*Context font=19px?*/
+		max-width:100%;
+		margin: 0 auto;
+		clear:both;
+	}
+	
+	#topLeft {
+		display:none;
+	}
+	
+	#topRight {
+		padding:2% 2% 1% 0 !important;
+		display:block;
+		float: right;
+	}
+	
+	#topRight li {
+		height: 20% !important;
+		float: left;
+		display:block;
+		margin-left:1.25em;
+	}
+	
+	#topRight li p {
+        height: 2.5em !important;
+    }
+	
+	#topRight li a {
+		text-align:center;
+	}
+	
+	.middleContent {
+	    position:relative;
+	}
+	
+	#middleContent {
+		padding:1em 0;
+		max-width:100%;
+		margin: 0.3125em auto;
+	}
+	
+	#toLeft { /*Context is font=16px*/
+		width:50%;
+		height:20em;
+		padding: 0.625em 0;
+		margin:0 auto;
+	}
+
+	.img {
+		max-width:100%;
+		-ms-interpolation-mode: bicubic;
+	}
+
+	#logo{
+		height:6.3125em;
+		display:block;
+		margin:0.625em auto 0.125em auto;
+	}
+	
+	#appIcons ul {
+		width: 10.9375em; /*26.71875em*/
+		width: 14.5625em;
+		height:1.3em;
+		margin:0.8em auto 0 auto;
+	}
+	
+	#appIcons li {
+		display: block;
+		float: left;
+		width: 25%;
+	    height:1.3em;
+	    padding:0;
+	    overflow:hidden;
+	    position:relative;
+	}
+	
+	.link {
+	    display:block;
+	    margin:0 auto;
+	    width: 1.1875em;
+	    height:2.625em;
+	    overflow:hidden;
+	    background:transparent url('../images/appSprite.png')no-repeat 0 0;
+	}
+	
+	.middleContent {
+        position: relative;
+    }
+	
+	#toRight{/*Context font=20px*/
+		width:80%;
+		min-height:11em;
+		height:100%;
+		margin:3em auto 0 auto;
+		clear:both;
+	}
+	
+	#toRight li{
+		width: 90%;
+	    height: 2.5em;
+	    padding: 0.45em 0;
+	    float:none;
+	    margin:0.35em auto 0 auto;
+	}
+	
+	.hail {
+	    bottom: 6.5%;
+	}
+	
+	.search {
+        padding: 0;
+    }
+	
+	.defaultButtons {
+		background:url('../images/defaultButton.png') repeat;
+		text-align:center;
+		font-size: 0.9em;
+		height:1em;
+		margin:0 0 0.55em 0;
+	}
+			
+	#socialMediaLinks ul{
+		width: 10.9375em !important; /*26.71875em*/
+	    margin:1.75em auto 1% auto;
+	}
+	
+	.icon{
+	    margin:0 auto;
+	}
+	
+	#bottomBg {
+		max-width:100%;
+		margin: 0 auto 0.6% auto;
+		clear:both;
+	    padding: 2%;
+	}
+	
+	#bottom li{
+		display: block;
+		float: left;
+		max-width:100%;
+		height:100%;
+	}
+	
+	#bottomLeft ul {
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#bottomLeft li{
+		display: block;
+		float: left;
+		min-width:20%;
+		padding:0;
+		text-align:center;
+	}
+	
+	#bottomLeft li a{
+		text-align:center;
+	}
+	
+	.bottomRight{
+		display: none;
+	}
+	
+	#rightSide{/*Context 16px*/
+		width:50em; /*800px*/
+		margin:0 auto;
+		min-height:28em;
+		height:43em;
+		clear:both;
+		padding:1.75em 0.5em 0 0.5em;
+		position:relative;
+		background: transparent url('../images/bg_leather.png') repeat;
+	}
+	
+	.register {
+		width:100%;
+		margin:0 2.5%;
+	}	
+	
+	.register fieldset {
+		display:block;
+		float:left;
+		width:30%;
+		margin:0 2.5% 0 0;
+	}
+	
+	.register fieldset.last-child {
+		margin:0;
+	}
+	
+	.register ul {
+		width:95%;
+		margin:1.25em auto 0 auto;
+	}		
+		
+	.padding{/*Context 20px*/
+		padding-bottom:10%;
+	}
+	
+	select, input, radio {
+		outline:none;
+	}
+    .small_width {
+        width: 29.6% !important;
+    }
+	
+	.textBox, .dropdownmenu {/*context 14px*/
+		margin:0 0 0.71429em 0;
+		width:100%;
+		height:2.875em;
+		padding:0.71429em;
+		background-color: #f6d758;
+		position:relative;
+	}
+	
+	/*For dropdown arrow*/
+	
+	.dropdownmenu:after{
+		content:no-close-quote;
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		background: transparent;
+	}
+	
+	.textBox.account{
+		margin:0;
+	}
+	
+	#AccountExpirationRow{/*Context 20px*/
+		height:2.875em;
+		width:100%;
+		position:relative;
+		display:none;
+	}
+	
+	#AccountExpirationRow ul {
+		width:100%;
+		height:100%;
+	}
+	
+	#AccountExpirationRow li{
+		display: block;
+		float: left;
+		height:100%;
+		width:33%;
+	}
+	
+	#AccountExpirationRow .ddlTextStyle{
+		margin:0 1% 0 0;
+	}
+	
+	.ddlStyle {
+		width:100%;
+		height:100%;
+		padding:0.625em;
+		background-color: #f6d758;
+	}
+	
+	#AccountExpirationRow li:last-child {
+		margin:0 0 8% 0;
+	}
+	
+	.style{
+		clear:both;
+	}
+
+	#packages2 {
+		display:block;
+		width:96%;
+		height:100%;
+		margin:1.875em auto 0.625em auto;
+	}
+	
+	#packages2 ul {
+		width:18em;
+	}
+	
+	#packages2 li {
+		padding: 0.5em 0 0 0;
+		border-bottom:1px black solid;
+	}
+	
+	#packages2 li:last-child {
+		border:0;
+	}
+	
+	#submitButtonStyle{
+		width:95%;
+		margin:0 auto;
+		height:100%;
+	}
+	
+	#submitButtonStyle ul{
+		max-width:50%;
+		height:100%;
+	}
+			
+	.button{
+		padding:3% 0;
+		margin:2% auto 10% auto;
+		min-width:100%;
+		/*min-height:100%;*/
+	}
+}
+
+/* Smartphones of all sizes */
+
+@media screen and (max-width: 400px) {
+
+	#wrapper{
+		margin:0 auto;
+		max-width:100%;
+		max-height:100%;
+	}
+
+	#top{/*Context font=19px?*/
+		max-width:100%;
+		margin: 0 auto;
+		clear:both;
+		padding:2% 2% 2% 0;
+	}
+	
+	#top li{
+		display: block;
+		float: left;
+	}
+	
+	#topLeft {
+		display:none;
+	}
+	
+	#topRight {
+		display: block;
+		float: right;
+	}
+		
+	#topRight li {
+		padding:0 0.526em;
+		max-height:100% !important;
+	}
+	
+	#topRight li p {
+		height:2.5em !important;
+	}
+	
+	.defaultButtons {
+		text-align:center;
+		width:85% !important;
+		max-width:100%;
+		min-height:13% !important;
+		margin:8% auto 2% auto !important;
+		background:url('../images/defaultButton.png') repeat;
+	}
+	
+	.defaultButtons:last-child {
+	    margin:0 auto 8% !important;
+	}
+	
+	#topRight li a{
+		text-align:center;
+	}
+				
+	#leftSide{
+		width:100%; /*480px*/
+		max-height:60%;
+		margin:0 auto 1.2% auto;
+		clear:both;
+	}
+			
+	#middleContent{
+		padding:1% 0 15% 0;
+		max-width:100%;
+		height:7.08333%;
+		margin: 1.2% auto !important;
+	}
+	
+	.middleContent {
+	    position:relative;
+	}
+	
+	#toLeft ul {
+        width: 90%;
+        height: 100%;
+        margin: 0 auto;
+	}
+	
+	#toLeft li{
+	    height: 2%;
+	    float:none;
+	    margin:3.5% auto 0 auto;
+	}
+
+	.img {
+		max-width:100%;
+		-ms-interpolation-mode: bicubic;
+	}
+	
+	#logo{
+		width:100%;
+		height:auto;
+		display:block;
+		padding:15% 0 0.125em 0;
+		margin:0 auto;
+	}
+	
+	#appIcons ul{
+		width:50% !important;
+		height:2.25em;
+		margin:8% auto 0 auto !important;
+	}
+	
+	#appIcons li{
+		display: block;
+		float: left;
+		width: 33%;
+	    height:1.325em;
+	    padding:0;
+	    overflow:hidden;
+	    position:relative;
+	}
+	
+	.link{
+	    display:block;
+	    margin:0 auto;
+	    width: 1.1875em;
+	    height:2.625em;
+	    overflow:hidden;
+	    background:transparent url('../images/appSprite.png')no-repeat 0 0;
+	}
+	
+	#toRight{/*Context font=20px*/
+		width:100%;
+		min-height:100%;
+		margin:0 auto;
+		clear:both;
+	}
+	
+	#toRight li{
+		height:100%;
+	    max-height: 2.5%;
+	    padding: 4% 0;
+	    float:none !important;
+	    margin:0 auto;
+	}
+	
+	.empty {
+		display:none;
+	}
+	
+	#socialMediaLinks ul {
+		width:50% !important;
+		height:2.25em;
+		margin:0.625em auto 1.875em auto;
+	}
+	
+	#socialMediaLinks li {
+		max-height:2.25em;
+		float:left !important;
+		margin:0 auto;
+	}
+
+	.icon{
+	    margin:20% auto 0 auto;
+	}
+	
+	#bottomBg {
+		max-width:100%;
+		margin: 0 auto;
+		clear:both;
+	    padding: 4% 2%;
+	}
+	
+	#bottom li{
+		display: block;
+		float: left;
+		max-width:100%;
+	}
+	
+	#bottomLeft ul {
+		width:100%;
+		margin:0 auto;
+	}
+	
+	#bottomLeft li{
+		display: block;
+		float: left;
+		min-width:20%;
+		padding:0;
+	}
+	
+	#bottomLeft li a{
+		text-align:center;
+	}
+	
+	.bottomRight{
+		display: none;
+	}
+		
+	#rightSide{/*Context 16px*/
+		max-width:100%; /*480px*/
+		max-height:100%;
+		margin:0 auto;
+		clear:both;
+		padding:2%;
+		background: transparent url('../images/bg_leather.png') repeat;
+        height: 57em !important;/*Might not require this line as not all <400px elements converted from mobile viewport*/
+	}
+		
+	.register ul {
+		width:95%;
+		margin:1.875em auto;
+	}
+	
+	.lpi1 {
+	    margin-top:-1.5%;
+	}
+	
+	.lpi2 {
+	    margin-top:-1.5%;
+	}
+	
+	.lpi3 {
+	    margin-top:-1.5%;
+	}
+		
+	.padding{/*Context 20px*/
+		padding-bottom:4%;
+	}
+		
+	select, input, radio {
+		outline:none;
+	}
+	
+	.textBox, .dropdownmenu {/*context 14px*/
+		margin:0 0 0.71429em 0;
+		width:100%;
+		max-width:100%;
+		min-height:3.5em;
+		padding:0.71429em;
+		background-color: #f6d758;
+		position:relative;
+	}
+	
+	/*For dropdown arrow*/
+	
+	.dropdownmenu:after{
+		content:no-close-quote;
+		position:absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		background: transparent;
+	}
+	
+	.textBox.account{
+		margin:0;
+	}
+	
+	#AccountExpirationRow{/*Context 20px*/
+		height:2.875em;
+		width:100%;
+		position:relative;
+		display:none;
+	}
+	
+	#AccountExpirationRow ul {
+		width:100%;
+		height:100%;
+	}
+	
+	#AccountExpirationRow li{
+		display: block;
+		float: left;
+		height:100%;
+		width:100%;
+	}
+	
+	#AccountExpirationRow .ddlTextStyle{
+		width:100%;
+		height:50%;
+		margin:0;
+		padding:0;
+	}
+	
+	.ddlStyle {
+		width:100%;
+		height:100%;
+		padding:0.625em;
+		background-color: #f6d758;
+	}
+	
+	#AccountExpirationRow li:last-child {
+		margin:0 0 8% 0;
+	}
+	
+	.style{
+		clear:both;
+	}
+
+	#packages2 {
+		width:96%;
+		height:100%;
+		margin:5% auto 10% auto;
+	}
+		
+	#packages2 li:first-child {
+		padding:0;
+	}
+	
+	p.price {
+		margin:3% 0;
+	}
+	
+	p.description {
+		padding:0 0 10% 0;
+	}
+	
+	#packages2 li {
+		padding: 10% 0 0 0;
+		border-bottom:1px black solid;
+	}
+	
+	#packages2 li:last-child {
+		border:0;
+	}
+
+	fieldset#submitButtonStyle{
+		width:100%;
+		height:100%;
+	}
+	
+	fieldset#submitButtonStyle ul{
+		max-width:100%;
+		max-height:100%;
+	}
+	
+	#submitButtonStyle p {
+	    margin-bottom:3%;
+	}
+			
+	.button{
+		padding:3% 0;
+		margin:0;
+		min-width:100%;
+		min-height:100%;
+	}
+}

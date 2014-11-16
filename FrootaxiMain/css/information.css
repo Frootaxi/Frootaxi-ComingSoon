@@ -1,0 +1,136 @@
+﻿*{
+	margin:0;
+	padding:0;
+	border:none;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+}
+
+body{
+	background-image: url('../images/day.jpg');
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#wrapper{
+	margin:0 auto;
+	max-height:100%;
+}
+
+#middleContent {
+    background-color: rgba(0, 0, 0, 0.72);
+    color: rgba(0, 0, 0, 0.72);
+	padding:1em 0;
+	max-width:100%;
+	margin: 0.3125em auto;
+}
+
+#leftSide {
+	width:50em; /*800px*/
+	min-height:100%;
+	margin:5% auto;
+	clear:both;
+}
+
+#toLeft { /*Context is font=16px*/
+	width:50%;
+	height:9.125em;
+	padding: 2.5em 0;
+	margin:0 auto;
+}
+
+img {
+	max-width:100%;
+	-ms-interpolation-mode: bicubic;
+}
+
+#logo{
+	height:6.3125em;
+	display:block;
+	margin:0.625em auto 0.125em auto;
+}
+
+#socialMediaLinks ul{
+	width: 10.9375em !important; /*26.71875em*/
+    margin:1.75em auto 1% auto;
+}
+
+#socialMediaLinks li{
+	width: 33% !important;
+    height:1.25em !important;
+    float: left !important;
+    display: block;
+    padding:0 !important;
+    position:relative;
+}
+
+.icon{
+    width: 19px !important;
+    height:21px !important;
+    margin:0 auto;
+    display:block;
+    overflow:hidden;
+    background:transparent url('../images/socialMediaSprite.png')no-repeat 0 0;
+}
+
+.facebook{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat 0 0 !important;
+}
+
+.twitter{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat -19px 0 !important;
+}
+
+.linkedIn{
+	background:transparent url('../images/socialMediaSprite.png') no-repeat -38px 0 !important;
+}
+
+#toRight{/*Context font=20px*/
+	width:85%;
+	min-height:12em;
+	height:100%;
+	margin:7% auto 0 auto;
+	clear:both;
+}
+
+legend {
+	margin:0 auto;
+	padding:0 0 3% 0;
+}
+
+#toRight li{
+	width: 90%;
+    line-height: 2.5em;
+    margin:0 auto;
+}
+
+p{
+	width:21.875em;
+	margin:0 auto;
+	margin-bottom:0.9375em;
+}
+
+#footer{
+	clear:both;
+	margin:60px auto 10px auto;
+	height:100%;
+	width:100%;
+}
+
+#footer p {
+	text-shadow: 0 0 0 transparent;
+	color:#E4C239 !important;
+}
